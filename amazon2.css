@@ -9,22 +9,27 @@
 }
 
 .navbar{
-    height:60px;
-    width: 100%;
-    color: #0f1111;
-    background-color: #0f1111;
-    display: flex;
+   position: absolute;
+        
+        height: 60px;
+        width: 100%;
+        margin:0px;
+        padding: 0px;
+        background-color: #0f1111;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     
-    justify-content: flex-start;
-    align-items: center;
-}
+    }
+
 
 .navbar div {
     position: relative;
     height:50px;
     margin:5px;
    
-    background-color:none;
+    background-color:#0f1111;
 }
 .nav{
     position: absolute;
@@ -35,8 +40,14 @@
     padding: 0px 5px ;
     
 }
+#logo{
+    width :130px;
+    height: 50px;
+    
+} 
 
  #logo img{
+    margin: 0px;
     width :130px;
     height: 50px;
     
@@ -68,12 +79,24 @@
     font-weight: 800;
     text-align: start;
 }
-
-#dropdown select{
+#search{
+    height: 50px;
+    flex-grow: 1;
     
-    position: absolute;
+    margin: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:#0f1111;
+
+}
+
+#dropdownmenu {
+    
+    /* position: absolute; */
     height:40px;
     width:50px;
+    padding: 0px;
     text-align: center;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px ;
@@ -82,50 +105,56 @@
 }
 
 #searchbox{
-    position: absolute;
-    left: 44px;
-    top:-4.5px;
+    /* position: absolute; */
+    left: -5px;
+    top:-2px;
     height:35px;
-    width: 430px;
+    
     padding: 0px;
     border: 0px;
     border-radius: 0px;
+    flex-grow: 1;
+    display: flex;
+    
 
 }
 #isearch{
     height:35px;
-    width: 430px;
+    min-width: 50px;
+ flex-grow: 1;
     padding: 0px;
     margin: 0px;
+    padding: 0px;
     border-radius: 0px;
     border: 2px solid white;
 }
 #submit button{
-    position: absolute;
-    left:465px;
+     position: relative;
+    left: -15px; 
+    top:4px;
     height:42px;
     width:60px;
     border-radius: 0px;
     background-color: goldenrod;
     padding: 0px;
     border-left:0px ;
-    top:-1px;
+    
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px ;
     
 }
 #language{
-    position: absolute;
+    /* position: absolute; */
     height: 40px;
     width:70px;
     background-color: #0f1111;
-    left:550px;
+    /* left:550px; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     justify-items: center;
     padding: 0px;
-    margin: 5px 0px;
+    margin: 5px 5px;
 }
   .lang{
     width: 20px;
@@ -147,23 +176,23 @@
     height: 20px;
    margin: 0px;
    top:5px;
-   left:4px;
+   /* left:4px; */
     
 }
 #en,#drop{
     margin: 0px;
     position: relative;
     top:10px;
-    width: 20px;
+    width: 28px;
     height: 20px;
-    left:5px;
+    /* left:5px; */
     font-size: 20px;
     color: aliceblue;
     font-weight: 800;
 }
 #drop select{
     position: relative;
-    left: 9px;
+    /* left: 11px; */
     top:5px;
     width: 12px;
     height: 12px;
@@ -173,14 +202,14 @@
 }
 #hello2,#orders {
 
-    position: absolute;
-    left:620px;
+    /* position: absolute;
+    left:620px; */
     height: 40px;
     width: 130px;
     background-color: #0f1111;
 }
-#orders {
-    left:750px;}
+/* #orders {
+    left:750px;} */
 #sign,#return{
     position: relative;
     left:2px;
@@ -196,7 +225,7 @@
 #account, #order{
     position: relative;
     height: 25px;
-    width: 130px;
+    
     padding: 1px;
     margin: 0px;
     font-size: 15px;
@@ -204,10 +233,17 @@
     font-weight: 900;
 
 }
+#account{
+    width: 130px;
+}
+#order,#orders {
+    width: 80px;
+
+}
 #cart {
 
-    position: absolute;
-    left:850px;
+    /* position: absolute;
+    left:850px; */
     display: flex;
     align-items: center;
     height: 40px;
@@ -267,21 +303,22 @@
     z-index: -1;
     position: absolute;
     top:600px;
-    height: 2700px;
+    height: 100%;
     width: 100%;
     margin: 0px;
     background-color: rgb(225, 239, 239);
 }
 #items{
-    position: absolute;
+    position: relative;
     top: 350px;
-    height: 1500px;
+    height: 3300px;
     width: 100%;
-    margin:0px;
+    margin:10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 .boxes .box{
     height: 380px;
@@ -289,21 +326,21 @@
     background-color:white;
     padding: 20px;
 }
-.boxes #longbox1,#longbox2,#longbox3{
+ #longbox1,#longbox2,#longbox3{
     width:100%;
     height:250px;
-    padding: 10px;
+    padding: 20px;
 }
 #text1,#text2,#text3,#text4,#m1text,#m2text,#m3text ,#m4text ,#m5text
  ,#m6text ,#m7text ,#m8text,#m9text ,#m10text ,#m11text,#m12text
  
   {
     
-    position: absolute;
+    position: relative;
     width:250px;
-    left:10px;
+    left:-10px;
     margin: 0px;
-    top:15px;
+    top:-15px;
     font-size: 24px;
     font-weight: 900;
     color: black;
@@ -313,28 +350,28 @@
 
 
 .box .single{
-    position: absolute;
-    top:60px;
-    left:-15px;
+    position: relative;
+    /* top:60px;*/
+    left:-10px; 
     width:260px;
     height: 280px;
-    padding: 5px;
+    padding: 10px;
 }
 
 #single1_cmore,#single2_cmore,#single3_cmore,#single4_cmore,#m1c_more{
-    position: absolute;
-    top:380px;
+    position: relative;
+    /* top:380px; */
 }
 .boxes a{
    text-decoration: none;
 }
 #m1mainbox,#m2mainbox,#m3mainbox,#m4mainbox,#m5mainbox,#m6mainbox,
 #m7mainbox,#m8mainbox,#m9mainbox,#m10mainbox,#m11mainbox,#m12mainbox{
-    position: absolute;
-    top: 90px;
-    left:15px;
-    height: 280px;
-    width: 260px;
+    position: relative;
+    top: -10px;
+    left:-10px; 
+    height: 275px;
+    width: 280px;
     margin:0px;
     display: flex;
     flex-wrap: wrap;
@@ -343,6 +380,7 @@
     
     
 }
+
 .box .m_mainbox .a1{
     margin: 0px;
 }
@@ -355,14 +393,16 @@
     
 }
 .a1 .in{
-    position: absolute;
-    top:100px;
+    position: relative;
+    /* top:100px; */
     font-size: 15px;
     
 }
-#downnav2{
+#downnav2{position: relative;
     height:50px;
-    width:100%;
+    top:-35px;
+    max-width: 50%;
+    min-width:100%;
     margin:0px;
     padding:0px;
     background-color: #333550;
@@ -372,17 +412,20 @@
     line-height: 50px;
     text-align: center;
 }
-#downnav1{
-    height:440px;
-    width:100%;
+#downnav1{position: relative;
+    top: -62px;
+    height:450px;
+    max-width: 50%;
+    min-width:100%;
+   
     margin:0px;
     padding:0px;
     background-color: #3a3765;
 }
-.box .lb {position: absolute;
+.box .lb {position: relative;
     height: 200px;
     width: 97%;
-    top:45px;
+    /* top:45px; */
     margin: 0px;
   
     display: flex;
@@ -402,11 +445,11 @@
 
 }
 .box .lbtext{
-    position: absolute;
+    position: relative;
     width:60%;
-    left:10px;
+    /* left:10px; */
     margin: 0px;
-    top:15px;
+    /* top:15px; */
     font-size: 24px;
     font-weight: 900;
     color: black;
@@ -414,20 +457,20 @@
     
 }
 .box .lb_c_more{
-    position: absolute;
-    top:27px;
+    position: relative;
+    top:-27px;
     left:570px;
     height: 20px;
     width: 200px;
 }
 
  #downnav1in{
-    position: absolute;
+    position: relative;
   left: 12.5%;
     height: 380px;
     width: 75%;
     ;
-    top:45px;
+    /* top:45px; */
     margin: 0px;
   
     display: flex;
@@ -446,7 +489,7 @@
 
 }
 .box .downnav1box ul{
-    position: absolute;
+    position: relative;
     top: 0px;
     left: -10px;
     line-height: 30px;
@@ -454,7 +497,7 @@
 }
 .box .downnav1box .li1{
     color: white;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 900;
 }
 
@@ -462,5 +505,18 @@
     
     color: rgba(255, 255, 255,0.8);
     text-align: left;
+
+}
+.navbar .nav:hover{
+    border:1px solid white;
+}
+.navbar2 .nav2:hover{
+    border:1px solid white;
+}
+.downnav1box .li:hover{
+ text-decoration: rgba(255, 255, 255,1) underline;
+}
+#downnav2:hover{
+    background-color: #57586b;
 
 }
