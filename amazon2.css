@@ -9,8 +9,8 @@
 }
 
 .navbar{
-   position: absolute;
-        
+   position: fixed;
+        z-index: 2;
         height: 60px;
         width: 100%;
         margin:0px;
@@ -302,7 +302,7 @@
 #bgcolor_page{
     z-index: -1;
     position: absolute;
-    top:600px;
+    /* top:600px; */
     height: 100%;
     width: 100%;
     margin: 0px;
@@ -399,8 +399,8 @@
     
 }
 #downnav2{position: relative;
-    height:50px;
-    top:-35px;
+    height:60px;
+    top:21px;
     max-width: 50%;
     min-width:100%;
     margin:0px;
@@ -413,8 +413,8 @@
     text-align: center;
 }
 #downnav1{position: relative;
-    top: -62px;
-    height:450px;
+    /* top: -62px; */
+    height:15%;
     max-width: 50%;
     min-width:100%;
    
